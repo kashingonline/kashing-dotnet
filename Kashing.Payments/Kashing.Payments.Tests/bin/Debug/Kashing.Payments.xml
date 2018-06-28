@@ -1,0 +1,213 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Kashing.Payments
+</name>
+</assembly>
+<members>
+<member name="T:Kashing.Payments.My.MyWebExtension">
+ <summary>
+ Module used to define the properties that are available in the My Namespace for Web projects.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Kashing.Payments.My.MyWebExtension.Computer">
+ <summary>
+ Returns information about the host computer.
+ </summary>
+</member>
+<member name="P:Kashing.Payments.My.MyWebExtension.User">
+ <summary>
+ Returns information for the current Web user.
+ </summary>
+</member>
+<member name="P:Kashing.Payments.My.MyWebExtension.Request">
+ <summary>
+ Returns Request object.
+ </summary>
+</member>
+<member name="P:Kashing.Payments.My.MyWebExtension.Response">
+ <summary>
+ Returns Response object.
+ </summary>
+</member>
+<member name="P:Kashing.Payments.My.MyWebExtension.Log">
+ <summary>
+ Returns the Asp log object.
+ </summary>
+</member>
+<member name="F:Kashing.Payments.Init_Transaction._form1">
+<summary>
+form1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Kashing.Payments.Init_Transaction._txtAmount">
+<summary>
+txtAmount control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Kashing.Payments.Init_Transaction._btnInitTransaction">
+<summary>
+btnInitTransaction control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Kashing.Payments.Init_Transaction._txtDouble">
+<summary>
+txtDouble control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Kashing.Payments.Init_Transaction._txtSingle">
+<summary>
+txtSingle control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Kashing.Payments.pSign_test._form1">
+<summary>
+form1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Kashing.Payments.pSign_test._lbJson">
+<summary>
+lbJson control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Kashing.Payments.pSign_test._txtJson">
+<summary>
+txtJson control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Kashing.Payments.pSign_test._lbKey">
+<summary>
+lbKey control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Kashing.Payments.pSign_test._txtKey">
+<summary>
+txtKey control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Kashing.Payments.pSign_test._lbCombine">
+<summary>
+lbCombine control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Kashing.Payments.pSign_test._txtCombine">
+<summary>
+txtCombine control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Kashing.Payments.pSign_test._lbPSign">
+<summary>
+lbPSign control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Kashing.Payments.pSign_test._txtPSign">
+<summary>
+txtPSign control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Kashing.Payments.pSign_test._btnCalcPsign">
+<summary>
+btnCalcPsign control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="M:Kashing.Payments.JsonUtil`1.ToObject(`0,System.String)">
+ <summary>
+ Convert to an Object(T) from json
+ </summary>
+ <param name="t"></param>
+ <param name="json"></param>
+ <returns></returns>
+</member>
+<member name="M:Kashing.Payments.JsonUtil`1.ToJson(`0)">
+ <summary>
+ Convert to Json from a Object(T)
+ </summary>
+ <param name="t"></param>
+ <returns></returns>
+</member>
+<member name="M:Kashing.Payments.StringUtil.PSign(System.String,System.String)">
+ <summary>
+ PSIGN
+ </summary>
+ <param name="orgId"></param>
+ <param name="json"></param>
+ <returns></returns>
+</member>
+<member name="M:Kashing.Payments.StringUtil.EncryptSHA(System.String)">
+ <summary>
+ Get Sha1
+ </summary>
+ <param name="input"></param>
+ <returns></returns>
+</member>
+<member name="M:Kashing.Payments.StringUtil.getValuesFromJson(System.String)">
+ <summary>
+ Concatenate the Values from a jSon String
+ </summary>
+ <param name="json"></param>
+ <returns></returns>
+</member>
+</members>
+</doc>
