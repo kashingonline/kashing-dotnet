@@ -76,7 +76,7 @@
             <tr>
                 <td class="auto-style4">Amount</td>
                 <td>
-                    <asp:TextBox ID="txtRefundAmount" runat="server" Width="20%"></asp:TextBox>
+                    <asp:TextBox ID="txtRefundAmount" runat="server" Width="20%" MaxLength="5"></asp:TextBox>
                 &nbsp;(in cents)</td>
             </tr>
             <tr>
@@ -86,7 +86,7 @@
             <tr>
                 <td class="auto-style4">Token (token from Init_Transaction)</td>
                 <td>
-                    <asp:TextBox ID="txtToken" runat="server" Width="40%"></asp:TextBox>
+                    <asp:TextBox ID="txtToken" runat="server" Width="40%" MaxLength="100"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -107,6 +107,44 @@
                 <td class="auto-style4">&nbsp;</td>
                 <td align="center">
                     <asp:Button ID="btnRefund" runat="server" Text="Refund Transaction" Width="20%" />
+                </td>
+            </tr>
+        </table>
+        <p>
+            &nbsp;</p>
+        <table class="auto-style1">
+            <tr>
+                <td class="auto-style4">Get Transaction</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style4">&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style4">Token (TransactionId)</td>
+                <td>
+                    <asp:TextBox ID="txtTokenGet" runat="server" Width="40%" MaxLength="100"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style4">&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style4">Result</td>
+                <td>
+                    <asp:TextBox ID="txtResultGet" runat="server" Height="90px" TextMode="MultiLine" Width="95%"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style4">&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style4">&nbsp;</td>
+                <td align="center">
+                    <asp:Button ID="btnGetTransaction" runat="server" Text="Get Transaction" />
                 </td>
             </tr>
         </table>

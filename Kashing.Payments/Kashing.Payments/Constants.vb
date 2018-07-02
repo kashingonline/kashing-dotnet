@@ -10,6 +10,8 @@ Public Class Constants
     Public Const InitTransaction As String = "https://staging-api.kashing.co.uk/transaction/init"
     ' Refund Transaction end-point
     Public Const RefundTransaction As String = "https://staging-api.kashing.co.uk/transaction/refund"
+    ' Get Transaction end-point
+    Public Const GetTransaction As String = "https://staging-api.kashing.co.uk/transaction/find"
 
     ' The Orginization Secret Key
     Public Const OrgSecret As String = "4bde-c32b-5adb-2624-a001-94a6"
@@ -32,7 +34,7 @@ Public Class Constants
     Public Const postcode = "NN17 8YG"
     Public Const country = "UK"
     Public Const datetocomplete = "2022-01-01"
-    Public Const uid = "O-99999"
+    Public Const uid = "Trans1"
     Public Const pid = "232"
     Public Const processtype = 1
     Public Const method = "1"

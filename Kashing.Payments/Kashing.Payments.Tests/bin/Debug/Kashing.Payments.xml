@@ -37,6 +37,11 @@ Kashing.Payments
  Returns the Asp log object.
  </summary>
 </member>
+<member name="T:Kashing.Payments.TransactionRefund">
+ <summary>
+ The Refund Object
+ </summary>
+</member>
 <member name="F:Kashing.Payments.Init_Transaction._form1">
 <summary>
 form1 control.
@@ -55,6 +60,15 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
+<member name="F:Kashing.Payments.Init_Transaction._txtResultInit">
+<summary>
+txtResultInit control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:Kashing.Payments.Init_Transaction._btnInitTransaction">
 <summary>
 btnInitTransaction control.
@@ -64,23 +78,60 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:Kashing.Payments.Init_Transaction._txtDouble">
+<member name="F:Kashing.Payments.Init_Transaction._txtRefundAmount">
 <summary>
-txtDouble control.
+txtRefundAmount control.
 </summary>
 <remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:Kashing.Payments.Init_Transaction._txtSingle">
+<member name="F:Kashing.Payments.Init_Transaction._txtToken">
 <summary>
-txtSingle control.
+txtToken control.
 </summary>
 <remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
+</member>
+<member name="F:Kashing.Payments.Init_Transaction._txtResultRefund">
+<summary>
+txtResultRefund control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Kashing.Payments.Init_Transaction._btnRefund">
+<summary>
+btnRefund control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="M:Kashing.Payments.Init_Transaction.btnInitTransaction_Click(System.Object,System.EventArgs)">
+ <summary>
+ Initiate the Transaction
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:Kashing.Payments.Init_Transaction.btnRefund_Click(System.Object,System.EventArgs)">
+ <summary>
+ Do a Refund on the Init Transaction
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="T:Kashing.Payments.Transaction">
+ <summary>
+ The Transaction Object for doing a Iniit Transaction
+ </summary>
 </member>
 <member name="F:Kashing.Payments.pSign_test._form1">
 <summary>
@@ -172,6 +223,58 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
+<member name="M:Kashing.Payments.pSign_test.btnCalcPsign_Click(System.Object,System.EventArgs)">
+ <summary>
+ Calculate the psign aka SHA1 of the String
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:Kashing.Payments.Transaction_Action.Init_Transaction(System.String)">
+ <summary>
+ ' Initiate a Transaction
+ </summary>
+ <param name="amount"></param>
+ <returns></returns>
+</member>
+<member name="M:Kashing.Payments.Transaction_Action.Refund_Transaction(System.String,System.String)">
+ <summary>
+ ' Refund a Transaction
+ </summary>
+ <param name="transactionId"></param>
+ <param name="amount"></param>
+ <returns></returns>
+</member>
+<member name="M:Kashing.Payments.Transaction_Action.ToJson(System.Object)">
+ <summary>
+ ' From Object to Json
+ </summary>
+ <param name="t"></param>
+ <returns></returns>
+</member>
+<member name="M:Kashing.Payments.Transaction_Action.ServiceCall(System.Uri,System.String)">
+ <summary>
+ ' Do a service call
+ </summary>
+ <param name="uri"></param>
+ <param name="json"></param>
+ <returns></returns>
+</member>
+<member name="M:Kashing.Payments.Transaction_Action.BuildTransaction(System.String)">
+ <summary>
+ ' Build the Transaction Object for Init Transaction
+ </summary>
+ <param name="amount"></param>
+ <returns></returns>
+</member>
+<member name="M:Kashing.Payments.Transaction_Action.BuildTransactionRefund(System.String,System.String)">
+ <summary>
+ ' Build the Refund Object for Refunding a Transaction
+ </summary>
+ <param name="transactionid"></param>
+ <param name="amount"></param>
+ <returns></returns>
+</member>
 <member name="M:Kashing.Payments.JsonUtil`1.ToObject(`0,System.String)">
  <summary>
  Convert to an Object(T) from json
@@ -195,9 +298,10 @@ To modify move field declaration from designer file to code-behind file.
  <param name="json"></param>
  <returns></returns>
 </member>
-<member name="M:Kashing.Payments.StringUtil.EncryptSHA(System.String)">
+<member name="M:Kashing.Payments.StringUtil.Sha1(System.String)">
  <summary>
- Get Sha1
+ Get the SHA1 for the seleted String
+  ' Tested with online sha1 calculator at http://www.sha1-online.com
  </summary>
  <param name="input"></param>
  <returns></returns>

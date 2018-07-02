@@ -31,7 +31,7 @@ Public Class Transaction
     Public postcode As String
     Public country As String
     Public datetocomplete As String
-    Public uid As String
+    'Public uid As String
     Public pid As String
     Public method As String
 

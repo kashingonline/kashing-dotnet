@@ -84,4 +84,31 @@ Partial Public Class Init_Transaction
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btnRefund As Global.System.Web.UI.WebControls.Button
+    
+    '''<summary>
+    '''txtTokenGet control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtTokenGet As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
+    '''txtResultGet control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtResultGet As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
+    '''btnGetTransaction control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnGetTransaction As Global.System.Web.UI.WebControls.Button
 End Class

@@ -32,6 +32,25 @@ Public Class Transaction_Action
     End Function
 
     ''' <summary>
+    ''' ' Get a Transaction using a token aka the TransactionId of the Transaction
+    ''' </summary>
+    ''' <param name="token"></param>
+    ''' <returns></returns>
+    Public Function Get_Transaction(token As String) As String
+        Dim transaction As TransactionGet = BuildGetTransaction(token)
+        Dim json As String = ToJson(transaction)
+        Dim jsonConcate As String = StringUtil.getValuesFromJson(json)
+        Dim psign As String = StringUtil.PSign(OrgSecret, jsonConcate)
+
+        transaction.psign = psign
+        json = ToJson(transaction)
+        Dim uri As Uri = New Uri(GetTransaction)
+
+        Dim output = ServiceCall(uri, json)
+        Return output
+    End Function
+
+    ''' <summary>
     ''' ' Refund a Transaction
     ''' </summary>
     ''' <param name="transactionId"></param>
@@ -123,13 +142,25 @@ Public Class Transaction_Action
             .postcode = Constants.postcode,
             .country = Constants.country,
             .datetocomplete = Constants.datetocomplete,
-            .uid = Constants.uid,
             .pid = Constants.pid,
             .method = Constants.method,
             .psign = ""
         }
         TransactionArray.Add(transaction)
         Return TransactionArray
+    End Function
+
+    ''' <summary>
+    ''' ' Build the Get Transaction Object
+    ''' </summary>
+    ''' <param name="token"></param>
+    ''' <returns></returns>
+    Function BuildGetTransaction(token As String) As TransactionGet
+        Dim getTransaction As TransactionGet = New TransactionGet With {
+            .token = token,
+            .psign = ""
+        }
+        Return getTransaction
     End Function
 
     ''' <summary>

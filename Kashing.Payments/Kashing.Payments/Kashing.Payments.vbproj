@@ -117,6 +117,7 @@
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\TransactionGet.vb" />
     <Compile Include="Models\TransactionRefund.vb" />
     <Compile Include="Transaction.aspx.designer.vb">
       <DependentUpon>Transaction.aspx</DependentUpon>

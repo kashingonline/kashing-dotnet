@@ -40,4 +40,15 @@ Public Class Init_Transaction
 
     End Sub
 
+    ''' <summary>
+    ''' Get Transaction Details for the current token aka TransactionId
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Protected Sub btnGetTransaction_Click(sender As Object, e As EventArgs) Handles btnGetTransaction.Click
+        Dim transaction_init = New Transaction_Action()
+        Dim serviceOut As String = transaction_init.Get_Transaction(txtTokenGet.Text)
+        txtResultGet.Text = serviceOut
+    End Sub
+
 End Class
